@@ -1,0 +1,505 @@
+// theme color
+$purple: #722ED1;
+$purpleSub: #C34AFF;
+$azure: #211BCE;
+$azureSub: #4D89F1;
+$blackblue:#211BCE;
+$blackblueSub:#4D89F1;
+$blue:#1890ff;
+$blueSub:#3FB9F8;
+$ocean:#13C2C2;
+$oceanSub:#69D5E6;
+$green: #3EAC12;
+$greenSub: #5BDECC;
+$yellow: #F8BC18;
+$yellowSub: #FF9C1C;
+$orange: #F5811C;
+$orangeSub: #FEB814;
+$red: #F5222D;
+$redSub: #FF5D65;
+$lightWhiteTextColor: rgba(0,0,0,0.8);
+@mixin menu ($color, $subColor){
+	.el-menu {
+		border-right: none;
+	}
+	//经典start
+	&.classic.dark {
+		.el-menu {
+			background-color: #001529;
+			.el-submenu__title,
+			.el-menu-item{
+				color: #fff;
+				i {
+					color: #fff;
+				}
+				&:hover {
+					background-color: transparent;
+					color: $color;
+					i {
+						color: $color;
+					}
+				}
+				&.is-active {
+					background-color: $color;
+					color: #fff;
+					i {
+						color: #fff;
+					}
+				}
+			}
+		&.el-menu--collapse{
+			> .el-submenu.is-active>.el-submenu__title,
+			> .el-menu-item.is-active{
+				color: $color;
+				i {
+					color: $color;
+				}
+			}
+		}
+		}
+	}
+	&.classic.lightWhite {
+		.el-menu {
+			background-color: #fff;
+			.el-submenu__title,
+			.el-menu-item{
+				color: $lightWhiteTextColor;
+				i {
+					color: $lightWhiteTextColor;
+				}
+				&:hover {
+					background-color: transparent;
+					color: $color;
+					i {
+						color: $color;
+					}
+				}
+				&.is-active {
+					// background-color: $color;
+					color: $color;
+					i {
+						color: $color;
+					}
+				}
+			}
+			&.el-menu--collapse{
+				> .el-submenu.is-active>.el-submenu__title,
+				> .el-menu-item.is-active{
+					color: $color;
+					i {
+						color: $color;
+					}
+				}
+			}
+		}
+	}
+	//经典end
+	//功能款start
+	&.functional.dark {
+		.el-menu {
+			background-color: #001529;
+			.el-submenu__title,
+			.el-menu-item{
+				color: #fff;
+				i {
+					color: #fff;
+				}
+				&:hover {
+					background-color: transparent;
+					color: $color;
+					i {
+						color: $color;
+					}
+				}
+				&.is-active {
+					color: $color;
+					i{
+						color: $color;
+					}
+				}
+			}
+			&.el-menu--horizontal {
+				> .el-submenu.is-active>.el-submenu__title,
+				> .el-menu-item.is-active {
+					border-bottom: none;
+					color: $color;
+					i{
+						color: $color;
+					}
+				}
+			}
+		}
+	}
+	&.functional.lightWhite {
+		.el-menu {
+			background-color: #fff;
+			.el-submenu__title,
+			.el-menu-item{
+				color: $lightWhiteTextColor;
+				i {
+					color: $lightWhiteTextColor;
+				}
+				&:hover {
+					background-color: transparent;
+					color: $color;
+					i {
+						color: $color;
+					}
+				}
+				&.is-active {
+					color: $color;
+					i{
+						color: $color;
+					}
+				}
+			}
+			&.el-menu--horizontal {
+				> .el-submenu.is-active>.el-submenu__title,
+				> .el-menu-item.is-active {
+					border-bottom: none;
+					color: $color;
+					i{
+						color: $color;
+					}
+				}
+			}
+		}
+	}
+	//功能款end
+	// 简约start 
+	&.plain.dark {
+		.el-menu {
+			background-color: #001529;
+			.el-submenu__title,
+			.el-menu-item{
+				color: #fff;
+				i {
+					color: #fff;
+				}
+				&:hover {
+					background-color: transparent;
+					color: $color;
+					i {
+						color: $color;
+					}
+				}
+				// &.is-active {
+					
+				// }
+			}
+			>.el-submenu.is-active>.el-submenu__title{
+				color: $color;
+				i {
+					color: $color;
+				}
+			}
+		}
+	}
+	&.plain.lightWhite {
+		.el-menu {
+			background-color: #fff;
+			.el-submenu__title,
+			.el-menu-item{
+				color: $lightWhiteTextColor;
+				i {
+					color: $lightWhiteTextColor;
+				}
+				&:hover {
+					background-color: transparent;
+					color: $color;
+					i {
+						color: $color;
+					}
+				}
+				// &.is-active {
+					
+				// }
+			}
+			>.el-submenu.is-active>.el-submenu__title{
+				color: $color;
+				i {
+					color: $color;
+				}
+			}
+		}
+	}
+	// 简约end
+}
+@mixin mixinPopup($color){
+	//经典start
+	&.classic.dark.el-menu--vertical{
+		> .el-menu {
+			background-color: #001529;
+			.el-submenu__title,
+			.el-menu-item{
+				color: #fff;
+				i {
+					color: #fff;
+				}
+				&:hover {
+					background-color: transparent;
+					color: $color;
+					i {
+						color: $color;
+					}
+				}
+				&.is-active {
+					color: #fff;
+					background-color: $color;
+					i {
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+	&.classic.lightWhite.el-menu--vertical{
+		> .el-menu {
+			background-color: #fff;
+			.el-submenu__title,
+			.el-menu-item{
+				color: $lightWhiteTextColor;
+				i {
+					color: $lightWhiteTextColor;
+				}
+				&:hover {
+					background-color: transparent;
+					color: $color;
+					i {
+						color: $color;
+					}
+				}
+				&.is-active {
+					color: #fff;
+					background-color: $color;
+					i {
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+	//经典end
+	//功能款start
+	&.functional.dark.el-menu--horizontal{
+		> .el-menu {
+			background-color: #001529;
+			.el-submenu__title,
+			.el-menu-item{
+				color: #fff;
+				background-color: #001529;
+				i {
+					color: #fff;
+				}
+				&:hover {
+					background-color: transparent;
+					color: $color;
+					i {
+						color: $color;
+					}
+				}
+				&.is-active {
+					color: #fff;
+					background-color: $color;
+					i {
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+	&.functional.lightWhite.el-menu--horizontal{
+		> .el-menu {
+			background-color: #fff;
+			.el-submenu__title,
+			.el-menu-item{
+				color: $lightWhiteTextColor;
+				background-color: #fff;
+				i {
+					color: $lightWhiteTextColor;
+				}
+				&:hover {
+					background-color: transparent;
+					color: $color;
+					i {
+						color: $color;
+					}
+				}
+				&.is-active {
+					color: #fff;
+					background-color: $color;
+					i {
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+	//功能款end
+	//简约start
+	&.plain.dark.el-menu--vertical{
+		> .el-menu{
+			background-color: #001529;
+			.el-submenu__title,
+			.el-menu-item{
+				color: #fff;
+				i {
+					color: #fff;
+				}
+				&:hover {
+					background-color: transparent;
+					color: $color;
+					i {
+						color: $color;
+					}
+				}
+				&.is-active {
+					color: #fff;
+					background-color: $color;
+					i {
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+	&.plain.lightWhite.el-menu--vertical{
+		> .el-menu{
+			background-color: #fff;
+			.el-submenu__title,
+			.el-menu-item{
+				color: $lightWhiteTextColor;
+				i {
+					color: $lightWhiteTextColor;
+				}
+				&:hover {
+					background-color: transparent;
+					color: $color;
+					i {
+						color: $color;
+					}
+				}
+				&.is-active {
+					color: #fff;
+					background-color: $color;
+					i {
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+	//简约end
+}
+#app {
+	.dark {
+		.app-sidebar-container {
+			background-color: #001529;
+		}
+	 &.functional{
+		 .app-header{
+			background-color: #001529; 
+		 }
+	 }	
+	}
+	.lightWhite{
+		.app-sidebar-container {
+			background-color: #fff;
+		}
+	}
+}
+// 玫紫
+#app .purple {
+  @include menu($purple,$purpleSub)
+}
+
+.purple {
+  @include mixinPopup($purple);
+}
+
+// 湛蓝
+#app .azure {
+  @include menu($azure, $azureSub);
+}
+
+.azure {
+  @include mixinPopup($azure);
+}
+
+// 深蓝
+#app .blackblue {
+  @include menu($blackblue, $blackblueSub);
+}
+
+.blackblue {
+  @include mixinPopup($blackblue);
+}
+
+// 经典蓝
+#app .blue {
+  @include menu($blue, $blueSub);
+}
+
+.blue {
+  @include mixinPopup($blue);
+}
+
+// 海洋
+#app .ocean {
+  @include menu($ocean, $oceanSub);
+}
+
+.ocean {
+  @include mixinPopup($ocean);
+}
+
+// 绿色
+#app .green {
+  @include menu($green, $greenSub);
+}
+
+.green {
+  @include mixinPopup($green);
+}
+
+// 丰收
+#app .yellow {
+  @include menu($yellow, $yellowSub);
+}
+
+.yellow {
+  @include mixinPopup($yellow);
+}
+
+// 橘黄
+#app .orange {
+  @include menu($orange, $orangeSub);
+}
+
+.orange {
+  @include mixinPopup($orange);
+}
+
+// 红色
+#app .red {
+  @include menu($red, $redSub);
+}
+
+.red {
+  @include mixinPopup($red);
+}
+
+
+
+:export {
+  purpleTheme: $purple;
+  azureTheme: $azure;
+  blackblueTheme: $blackblue;
+  blueTheme: $blue;
+  oceanTheme: $ocean;
+  greenTheme: $green;
+  yellowTheme: $yellow;
+  orangeTheme: $orange;
+  redTheme: $red;
+  defaultTheme: #409EFF;
+}
